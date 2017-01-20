@@ -1,7 +1,7 @@
 import os
 import ast
 from msvcrt import getch
-print("Checking load.txt ...")
+print("Checking load.txt ......")
 f = open("load.txt", "r+")
 read = f.read()
 f.close()
