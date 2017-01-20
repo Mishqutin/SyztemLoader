@@ -1,0 +1,1 @@
+{'second': 'A', 'sDir': 'E:\\zyx\\KodeKarrots\\opped\\SpeakingSzit\\SyztemLoader', 'runDir': 'E:\\zyx\\KodeKarrots\\opped\\SpeakingSzit\\SyztemLoader\\data\\local', 'complete': True, 'first': 'B', 'third': 'C'}

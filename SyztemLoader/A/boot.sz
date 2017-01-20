@@ -1,0 +1,23 @@
+test set 2+2
+output test
+nl
+outstr Hello world! Madafaka!
+outstr Kod do czegos.
+getkey
+nl
+outstr To jest input:
+nl
+output ISCkey
+nl
+outstr Input heh
+input
+output ISCkey
+nl
+outstr A teraz poczekamy 2 sek...
+nl
+sleep 3.5
+cls
+outstr Serio to 3.5
+outstr Pewnego razu, nie ogarnialem czemu.. chuj z tym potem Ci powiem
+nl
+outstr Clear screen!

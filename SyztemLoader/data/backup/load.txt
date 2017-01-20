@@ -1,0 +1,9 @@
+# Syntax is: key = value   There must be two spaces. Else everything will fuck up.
+complete = False
+sDir = 
+runDir = 
+first = A
+sec = B
+third = C
+pass = False
+password = 1234
