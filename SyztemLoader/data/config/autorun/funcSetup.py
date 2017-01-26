@@ -3,3 +3,7 @@
 
 # SCmd
 sz.SZData("print", "SCmd", "print(args[0])")
+sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")
+sz.SZData("termColor", "SCmd", "os.system('color {}{}'.format(args[0], args[1]))")
+sz.SZData("terminate", "SCmd", "exit()")
+sz.SZData("python", "SCmd", "ISC.python(args[0])")
