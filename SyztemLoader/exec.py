@@ -14,6 +14,10 @@ class ISC:
                     sz.SVar(p[0], p[1])
                 else:
                     sz.SVar(p[0])
+    def python(path):   # executes Python files
+        f = open(path, "r")
+        exec(f.read())
+        f.close()
 os.system("cls")
 
 # Boot - Get txt from load.txt and convert it to dictionary for later use.
@@ -37,6 +41,7 @@ for i in os.listdir():
         for y in f.readlines():
             if not y[0]=="#":   # If line starts with '#' then ignore it. Acts like a comment.
                 ISC.do(y)   # What is ISC I have wrote in README.MD.
+        f.close()
     elif i[-3:]==".py":
         pass
     else:
