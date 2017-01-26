@@ -4,13 +4,13 @@ import sys
 from syztem import sz
 from ast import literal_eval as lEval
 class ISC:
-    def do(cmd):
+    def do(cmd):    # cmd must be a string
         p = cmd.split()
-        if p[0] in sz.SZdata:
-            if sz.SZdata[p[0]]["type"]=="SCmd":
+        if p[0] in sz.SZdata:   # check if it's defined
+            if sz.SZdata[p[0]]["type"]=="SCmd": # Check if its is SCmd..
                 sz.SCmdv2(p[0], p[1:])
-            elif sz.SZdata[p[0]]["type"]=="SVar":
-                if len(p)>1:
+            elif sz.SZdata[p[0]]["type"]=="SVar":   # ..or SVar.
+                if len(p)>1:    # If any arguments were passed.
                     sz.SVar(p[0], p[1])
                 else:
                     sz.SVar(p[0])
@@ -35,7 +35,7 @@ for i in os.listdir():
     if i[-3:]==".sz":
         f = open(i, "r")
         for y in f.readlines():
-            if not y[0]=="#":
+            if not y[0]=="#":   # If line starts with '#' then ignore it. Acts like a comment.
                 ISC.do(y)   # What is ISC I have wrote in README.MD.
     elif i[-3:]==".py":
         pass
