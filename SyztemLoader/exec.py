@@ -47,3 +47,12 @@ for i in os.listdir():
     else:
         print("[!]Non-executable file format! {}".format(i))
 
+os.chdir("{}\\{}".format(config["sDir"], config["first"]))
+#try:
+f = open("boot.sz", "r")
+for y in f.readlines():
+    if not y[0]=="#":
+        ISC.do(y)
+f.close()
+#except:
+#    print("[!]Boot file unreadable!")

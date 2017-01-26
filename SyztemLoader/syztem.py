@@ -1,6 +1,20 @@
 import os
 import ast
-
+class ISC: # It must be here too.
+    def do(cmd):
+        p = cmd.split()
+        if p[0] in sz.SZdata:
+            if sz.SZdata[p[0]]["type"]=="SCmd":
+                sz.SCmdv2(p[0], p[1:])
+            elif sz.SZdata[p[0]]["type"]=="SVar":
+                if len(p)>1:
+                    sz.SVar(p[0], p[1])
+                else:
+                    sz.SVar(p[0])
+    def python(path):
+        f = open(path, "r")
+        exec(f.read())
+        f.close()
 
 class sz:
     SZdata = {}
@@ -15,13 +29,13 @@ class sz:
             print("[!]Command cannot be executed.")
         
     def SCmdv2(cmd, arg):
-        try:
-            args = []
-            for i in arg:
-                args.append(ast.literal_eval(i))
-            exec(sz.SZdata[cmd]["value"])
-        except:
-            print("[!]Command cannot be executed.")
+#        try:
+        args = []
+        for i in arg:
+            args.append(i)
+        exec(sz.SZdata[cmd]["value"])
+#        except:
+#            print("[!]Command cannot be executed.")
         
     def SVar(var, value=None):
         try:
