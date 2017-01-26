@@ -1,0 +1,2 @@
+Backup directory exists as storage for old, unused files.
+I don't know why I've put it here.
