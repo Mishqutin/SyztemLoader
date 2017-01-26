@@ -1,1 +1,1 @@
-Chuj do ladowania jeden
+Main boot file :) .

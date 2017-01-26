@@ -1,1 +1,1 @@
-{'third': 'C', 'sDir': 'E:\\zyx\\KodeKarrots\\opped\\SpeakingSzit\\SyztemLoader', 'complete': True, 'first': 'A', 'runDir': 'E:\\zyx\\KodeKarrots\\opped\\SpeakingSzit\\SyztemLoader\\data\\local', 'second': 'B'}
+{'complete': True, 'second': 'B', 'runDir': 'E:\\zyx\\KodeKarrots\\opped\\SpeakingSzit\\SyztemLoader\\data\\local', 'third': 'C', 'sDir': 'E:\\zyx\\KodeKarrots\\opped\\SpeakingSzit\\SyztemLoader', 'first': 'A'}
