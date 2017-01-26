@@ -16,19 +16,19 @@ class ISC:
                     sz.SVar(p[0])
 os.system("cls")
 
-# Boot - Get txt from file and convert it to dictionary
+# Boot - Get txt from load.txt and convert it to dictionary for later use.
 f = open("load.txt", "r")
 config = lEval(f.read())
 f.close()
 
-
+# Go to directory where all the config is located and load it.
 os.chdir("{}\\{}".format(config["sDir"], "data\\config\\autorun"))
 for i in os.listdir():
     if i[-3:]==".py":
         try:
             f = open(i, "r")
-            exec(f.read())
-            f.close()
+            exec(f.read())  # From every file get content and exec() it.
+            f.close()       # In this form everything is placed in local scope.
         except:
             print("[!]Error at {} in autorun!".format(i))
 for i in os.listdir():
@@ -36,7 +36,7 @@ for i in os.listdir():
         f = open(i, "r")
         for y in f.readlines():
             if not y[0]=="#":
-                ISC.do(y)
+                ISC.do(y)   # What is ISC I have wrote in README.MD.
     elif i[-3:]==".py":
         pass
     else:
