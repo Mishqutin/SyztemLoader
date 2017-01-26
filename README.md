@@ -94,8 +94,4 @@ data/stools
 
 There should be modules, libraries etc.
 
-<<<<<<< HEAD
 (It is a shorcut of 'Syztem Tools' :P )
-=======
-(It is a shorcut of 'Syztem Tools' :P )
->>>>>>> a8da99066959a0996dda3e4b91322b23fa8f07cd
