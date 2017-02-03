@@ -1,6 +1,6 @@
 # Setups all basic varaibles etc.
 # If you want use commands with arguments simply put args[int] in place.
-
+import time
 # SCmd
 sz.SZData("print", "SCmd", "print( ast.literal_eval( ' '.join(args[0:]) ) )")
 sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")

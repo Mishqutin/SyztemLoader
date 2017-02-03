@@ -1,4 +1,5 @@
 import os
+import time
 import ast
 class ISC: # It must be here too.
     def do(cmd):
@@ -13,6 +14,8 @@ class ISC: # It must be here too.
                     sz.SVar(p[0])
     def python(path):
         f = open(path, "r")
+        print(f.read())
+        f.seek(0)
         exec(f.read())
         f.close()
 
@@ -48,3 +51,8 @@ class sz:
             
     def SZData(name, type, value):
         sz.SZdata[name] = {"type": type, "value": value}
+    
+    def ExecSZEnv(path):
+        f = open(path, "r")
+        exec(f.read())  # From every file get content and exec() it.
+        f.close()

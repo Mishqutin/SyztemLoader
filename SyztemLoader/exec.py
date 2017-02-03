@@ -1,4 +1,5 @@
 from msvcrt import getch
+import time
 import os
 import sys
 from syztem import sz
@@ -8,7 +9,10 @@ class ISC:
         p = cmd.split()
         if p[0] in sz.SZdata:   # check if it's defined
             if sz.SZdata[p[0]]["type"]=="SCmd": # Check if its is SCmd..
-                sz.SCmdv2(p[0], p[1:])
+                if len(p)>1:
+                    sz.SCmdv2(p[0], p[1:])
+                else:
+                    sz.SCmdv2(p[0])
             elif sz.SZdata[p[0]]["type"]=="SVar":   # ..or SVar.
                 if len(p)>1:    # If any arguments were passed.
                     sz.SVar(p[0], p[1])
@@ -30,9 +34,8 @@ os.chdir("{}\\{}".format(config["sDir"], "data\\config\\autorun"))
 for i in os.listdir():
     if i[-3:]==".py":
         try:
-            f = open(i, "r")
-            exec(f.read())  # From every file get content and exec() it.
-            f.close()       # In this form everything is placed in local scope.
+            sz.ExecSZEnv(i) # From every file get content and exec() it.
+                            # In this form everything is placed in syztem scope.
         except:
             print("[!]Error at {} in autorun!".format(i))
 for i in os.listdir():
