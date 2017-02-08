@@ -3,6 +3,7 @@ import time
 import ast
 class ISC: # It must be here too.
     def do(cmd):
+        sz.logTo(sz.config["sDir"]+"\\log.txt", str(cmd))
         p = cmd.split()
         if p[0] in sz.SZdata:
             if sz.SZdata[p[0]]["type"]=="SCmd":
