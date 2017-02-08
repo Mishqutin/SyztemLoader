@@ -14,13 +14,16 @@ class ISC: # It must be here too.
                     sz.SVar(p[0])
     def python(path):
         f = open(path, "r")
-        print(f.read())
+        sz.logTo(sz.config["sDir"]+"\\log.txt", "+Python file {}".format(path))
+        sz.logTo(sz.config["sDir"]+"\\log.txt", f.readlines())
+        sz.logTo(sz.config["sDir"]+"\\log.txt", "eof+")
         f.seek(0)
         exec(f.read())
         f.close()
 
 class sz:
     SZdata = {}
+    config = 0
 
     def getConfig():
         return ast.literal_eval(os.environ["SZconfig"])
@@ -56,3 +59,6 @@ class sz:
         f = open(path, "r")
         exec(f.read())  # From every file get content and exec() it.
         f.close()
+    
+    def logTo(path, text):
+        os.system("echo {} >> {}".format(text, path))

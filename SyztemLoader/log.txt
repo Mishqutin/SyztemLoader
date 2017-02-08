@@ -1,0 +1,16 @@
+### 08/02/2017--22:40:49 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', 'import time\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(args[0])")\n', 'sz.SZData("clear", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("ls", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")'] 
+eof+ 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("clear")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBP OS\n', '(Early shit/Wczesne g¢wno)""")\n', 'time.sleep(2)\n', 'ISC.do("clear")\n', 'print("By this console you can use SCmds.")\n', 'print("To get a list enter getSZdata. (Good luck in reading it!)")\n', 'while True:\n', '    x = input()\n', '    ISC.do(x)'] 
+eof+ 
+### 08/02/2017--22:41:49 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', 'import time\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(args[0])")\n', 'sz.SZData("clear", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("ls", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")'] 
+eof+ 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("clear")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBP OS\n', '(Early shit/Wczesne g¢wno)""")\n', 'time.sleep(2)\n', 'ISC.do("clear")\n', 'print("By this console you can use SCmds.")\n', 'print("To get a list enter getSZdata. (Good luck in reading it!)")\n', 'while True:\n', '    x = input()\n', '    ISC.do(x)'] 
+eof+ 

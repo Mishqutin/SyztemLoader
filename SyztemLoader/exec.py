@@ -3,8 +3,9 @@ import time
 import os
 import sys
 from syztem import sz
+from syztem import ISC
 from ast import literal_eval as lEval
-class ISC:
+class ISCOUTDATED:
     def do(cmd):    # cmd must be a string
         p = cmd.split()
         if p[0] in sz.SZdata:   # check if it's defined
@@ -28,13 +29,15 @@ os.system("cls")
 f = open("load.txt", "r")
 config = lEval(f.read())
 f.close()
+sz.config = config
 
+sz.logTo(config["sDir"]+"\\log.txt" ,time.strftime("### %d/%m/%Y--%H:%M:%S ###"))   # Start logging
 # Go to directory where all the config is located and load it.
 os.chdir("{}\\{}".format(config["sDir"], "data\\config\\autorun"))
 for i in os.listdir():
     if i[-3:]==".py":
         try:
-            sz.ExecSZEnv(i) # From every file get content and exec() it.
+            ISC.python(i) # From every file get content and exec() it.
                             # In this form everything is placed in syztem scope.
         except:
             print("[!]Error at {} in autorun!".format(i))
@@ -55,6 +58,7 @@ os.chdir("{}\\{}".format(config["sDir"], config["first"]))
 f = open("boot.sz", "r")
 for y in f.readlines():
     if not y[0]=="#":
+        sz.logTo(config["sDir"]+"\\log.txt", str(y))
         ISC.do(y)
 f.close()
 #except:
