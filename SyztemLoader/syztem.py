@@ -62,3 +62,7 @@ class sz:
     
     def logTo(path, text):
         os.system("echo {} >> {}".format(text, path))
+    
+    def showFile(path):
+        os.system('type {}'.format(str(path)))
+        print("\n")
