@@ -52,6 +52,9 @@ class sz:
                 print(sz.SZdata[var]["value"])
         except:
             print("[!]Could not read variable.")
+    
+    def getSVar(name):
+        pass
             
     def SZData(name, type, value):
         sz.SZdata[name] = {"type": type, "value": value}

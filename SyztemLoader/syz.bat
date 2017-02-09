@@ -45,7 +45,7 @@ setx SyztemDataC "%c%"
 set config=0
 echo Configuring startup...
 echo -Press Shift+W to configure load.txt-
-choice /n /c 0WQ /cs /d 0 /t 4
+choice /n /c 0WQ /cs /d 0 /t 2
 if errorlevel 2 set config=1
 if errorlevel 3 goto restart
 if %config%==1 goto config
