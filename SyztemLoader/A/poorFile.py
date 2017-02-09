@@ -39,5 +39,5 @@ while True:
 --------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))
     x = input()
     if x:
-        ISC.do(x)
         ISC.do("output {}".format(x))
+        ISC.do(x)
