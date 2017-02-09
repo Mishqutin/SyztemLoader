@@ -40,7 +40,8 @@ def listDir():
             add.append(i)
     if add:
         appendCI(add)
-
+def clearCI():
+    sz.SZData("cmdInput", "SVar", '["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]')
 class sz:
     SZdata = {}
     config = 0
