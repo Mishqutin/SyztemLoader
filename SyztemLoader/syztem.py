@@ -22,6 +22,25 @@ class ISC: # It must be here too.
         exec(f.read())
         f.close()
 
+# Functions
+def appendCI(txt):
+    cmdInput=ast.literal_eval(sz.SZdata['cmdInput']['value'])
+    cmdInput.append(str(txt))
+    del cmdInput[0]
+    sz.SZdata['cmdInput']['value']=str(cmdInput)
+
+def listDir():
+    last = 0
+    add = []
+    for i in os.listdir():
+        if len(add)>2:
+            appendCI(add)
+            add = []
+        else:
+            add.append(i)
+    if add:
+        appendCI(add)
+
 class sz:
     SZdata = {}
     config = 0

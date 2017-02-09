@@ -5,6 +5,7 @@ import sys
 from syztem import sz
 from syztem import ISC
 from ast import literal_eval as lEval
+import syztem
 class ISCOUTDATED:
     def do(cmd):    # cmd must be a string
         p = cmd.split()

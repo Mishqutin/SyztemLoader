@@ -1,6 +1,9 @@
 # Setups all basic varaibles etc.
 # If you want use commands with arguments simply put args[int] in place.
 import time
+
+        
+
 # SCmd
 sz.SZData("print", "SCmd", "print( ast.literal_eval( ' '.join(args[0:]) ) )")
 sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")
@@ -10,7 +13,7 @@ sz.SZData("python", "SCmd", "ISC.python(args[0])")
 sz.SZData("cd", "SCmd", "os.chdir(' '.join(args))")
 sz.SZData("cls", "SCmd", "os.system('cls')")
 sz.SZData("clear", "SCmd", 'cmdInput = ["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]')
-sz.SZData("ls", "SCmd", "print(os.listdir())")
+sz.SZData("ls", "SCmd", "listDir()")
 sz.SZData("dir", "SCmd", "print(os.getcwd())")
 sz.SZData("show", "SCmd", "sz.showFile(' '.join(args))")
 sz.SZData("exec", "SCmd", "exec(' '.join(args))")
