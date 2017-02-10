@@ -4,15 +4,20 @@ import ast
 class ISC: # It must be here too.
     def do(cmd):
         sz.logTo(sz.config["sDir"]+"\\log.txt", str(cmd))
-        p = cmd.split()
+        try:
+            p = cmd.split()
+        except:
+            pass
         if p[0] in sz.SZdata:
             if sz.SZdata[p[0]]["type"]=="SCmd":
                 sz.SCmdv2(p[0], p[1:])
+                
             elif sz.SZdata[p[0]]["type"]=="SVar":
                 if len(p)>1:
                     sz.SVar(p[0], p[1])
                 else:
-                    sz.SVar(p[0])
+                    appendCI(sz.SZdata[p[0]]['value'])
+                    return sz.SZdata[p[0]]['value']
     def python(path):
         f = open(path, "r")
         sz.logTo(sz.config["sDir"]+"\\log.txt", "+Python file {}".format(path))
@@ -67,9 +72,9 @@ class sz:
     def SVar(var, value=None):
         try:
             if value:
-                sz.SZdata[var]["value"] = value
+                exec('sz.SZdata[var]["value"] = {}'.format(value))
             else:
-                print(sz.SZdata[var]["value"])
+                return sz.SZdata[var]["value"]
         except:
             print("[!]Could not read variable.")
     

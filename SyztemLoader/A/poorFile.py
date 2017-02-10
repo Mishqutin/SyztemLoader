@@ -1,6 +1,5 @@
 ISC.do("cls")
 ISC.do("title Qutin")
-sz.SZData("cmdInput", "SVar", '["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]')
 print("""
 
 #PBFSEP V0.1.0`
