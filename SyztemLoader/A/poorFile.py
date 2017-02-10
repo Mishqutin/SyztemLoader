@@ -3,11 +3,11 @@ ISC.do("title Qutin")
 sz.SZData("cmdInput", "SVar", '["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]')
 print("""
 
-#PBFSEP V0.1.0
+#PBFSEP V0.1.0`
 
 
                           SBPQ OS
-(Early shit/Wczesne gówno)""")
+(Early shit/Wczesne gowno)""")
 time.sleep(1)
 while True:
     ISC.do("cls")

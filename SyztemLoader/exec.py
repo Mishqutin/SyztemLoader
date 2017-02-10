@@ -6,27 +6,10 @@ from syztem import sz
 from syztem import ISC
 from ast import literal_eval as lEval
 import syztem
-class ISCOUTDATED:
-    def do(cmd):    # cmd must be a string
-        p = cmd.split()
-        if p[0] in sz.SZdata:   # check if it's defined
-            if sz.SZdata[p[0]]["type"]=="SCmd": # Check if its is SCmd..
-                if len(p)>1:
-                    sz.SCmdv2(p[0], p[1:])
-                else:
-                    sz.SCmdv2(p[0])
-            elif sz.SZdata[p[0]]["type"]=="SVar":   # ..or SVar.
-                if len(p)>1:    # If any arguments were passed.
-                    sz.SVar(p[0], p[1])
-                else:
-                    sz.SVar(p[0])
-    def python(path):   # executes Python files
-        f = open(path, "r")
-        exec(f.read())
-        f.close()
+# There was some shit. I will make comments more readable soon -_-
 os.system("cls")
 
-# Boot - Get txt from load.txt and convert it to dictionary for later use.
+# Boot - Get text from load.txt and convert it to dictionary for later use.
 f = open("load.txt", "r")
 config = lEval(f.read())
 f.close()
