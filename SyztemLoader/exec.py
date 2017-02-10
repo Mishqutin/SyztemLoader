@@ -9,28 +9,27 @@ import syztem
 # There was some shit. I will make comments more readable soon -_-
 os.system("cls")
 
-# Boot - Get text from load.txt and convert it to dictionary for later use.
+# Get data from load.txt and turn it into dictionary.
 f = open("load.txt", "r")
 config = lEval(f.read())
 f.close()
 sz.config = config
 
 sz.logTo(config["sDir"]+"\\log.txt" ,time.strftime("### %d/%m/%Y--%H:%M:%S ###"))   # Start logging
-# Go to directory where all the config is located and load it.
+# Change directory.
 os.chdir("{}\\{}".format(config["sDir"], "data\\config\\autorun"))
 for i in os.listdir():
     if i[-3:]==".py":
         try:
-            ISC.python(i) # From every file get content and exec() it.
-                            # In this form everything is placed in syztem scope.
+            ISC.python(i) # Execute string from every file in cwd.
         except:
             print("[!]Error at {} in autorun!".format(i))
 for i in os.listdir():
     if i[-3:]==".sz":
         f = open(i, "r")
         for y in f.readlines():
-            if not y[0]=="#":   # If line starts with '#' then ignore it. Acts like a comment.
-                ISC.do(y)   # What is ISC I have wrote in README.MD.
+            if not y[0]=="#":   # Hash acts like a comment.
+                ISC.do(y)
         f.close()
     elif i[-3:]==".py":
         pass
@@ -38,12 +37,11 @@ for i in os.listdir():
         print("[!]Non-executable file format! {}".format(i))
 
 os.chdir("{}\\{}".format(config["sDir"], config["first"]))
-#try:
+# Execute boot.sz in earlier selected directory (A, B or C)
 f = open("boot.sz", "r")
 for y in f.readlines():
     if not y[0]=="#":
         sz.logTo(config["sDir"]+"\\log.txt", str(y))
         ISC.do(y)
 f.close()
-#except:
-#    print("[!]Boot file unreadable!")
+# It is 10.02.2017, 18:26 GMT+0 - I need to take a shit.
