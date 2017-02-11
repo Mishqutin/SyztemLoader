@@ -1,8 +1,9 @@
 import os
+import sys
 import time
 import ast
 import subprocess
-class ISC: # It must be here too.
+class ISC:
     def do(cmd):
         sz.logTo(sz.config["sDir"]+"\\log.txt", str(cmd))
         try:
@@ -110,3 +111,4 @@ class sz:
     def showFile(path):
         os.system('type {}'.format(str(path)))
         print("\n")
+    

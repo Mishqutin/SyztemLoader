@@ -7,7 +7,7 @@ print("""
 
                           SBPQ OS
 (Early shit/Wczesne gowno)""")
-time.sleep(1)
+time.sleep(0.75)
 while True:
     currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )
     sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])
