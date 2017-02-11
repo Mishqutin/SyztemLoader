@@ -3,6 +3,7 @@ import sys
 import time
 import ast
 import subprocess
+import msvcrt
 class ISC:
     def do(cmd):
         sz.logTo(sz.config["sDir"]+"\\log.txt", str(cmd))
