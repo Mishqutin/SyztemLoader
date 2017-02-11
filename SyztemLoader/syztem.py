@@ -1,6 +1,7 @@
 import os
 import time
 import ast
+import subprocess
 class ISC: # It must be here too.
     def do(cmd):
         sz.logTo(sz.config["sDir"]+"\\log.txt", str(cmd))
@@ -14,7 +15,7 @@ class ISC: # It must be here too.
                 
             elif sz.SZdata[p[0]]["type"]=="SVar":
                 if len(p)>1:
-                    sz.SVar(p[0], p[1])
+                    sz.SVar(p[0], eval(p[1]))
                 else:
                     appendCI(sz.SZdata[p[0]]['value'])
                     return sz.SZdata[p[0]]['value']
@@ -29,24 +30,41 @@ class ISC: # It must be here too.
 
 # Functions
 def appendCI(txt):
+    txt = str(txt)
     cmdInput=ast.literal_eval(sz.SZdata['cmdInput']['value'])
-    cmdInput.append(str(txt))
-    del cmdInput[0]
+    line = ''
+    for i in txt:
+        if len(line)<68:
+            line = line+i
+        else:
+            cmdInput.append(line)
+            line = i
+    cmdInput.append(line)
     sz.SZdata['cmdInput']['value']=str(cmdInput)
 
 def listDir():
-    last = 0
-    add = []
     for i in os.listdir():
-        if len(add)>2:
-            appendCI(add)
-            add = []
-        else:
-            add.append(i)
-    if add:
-        appendCI(add)
+        appendCI(i)
 def clearCI():
     sz.SZData("cmdInput", "SVar", '["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]')
+
+def scrollUp():
+    scroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )
+    for i in range(len(scroll)):
+        scroll[i]=scroll[i]-1
+    sz.SZdata['currentPageScroll']['value'] = str(scroll)
+
+def scrollDown():
+    scroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )
+    for i in range(len(scroll)):
+        scroll[i]=scroll[i]+1
+    sz.SZdata['currentPageScroll']['value'] = str(scroll)
+
+def editSidebar(row, text):
+    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])
+    sidebar[int(row)]=text
+    sz.SZdata['sidebarContent']['value'] = str(sidebar)
+
 class sz:
     SZdata = {}
     config = 0
@@ -77,9 +95,6 @@ class sz:
                 return sz.SZdata[var]["value"]
         except:
             print("[!]Could not read variable.")
-    
-    def getSVar(name):
-        pass
             
     def SZData(name, type, value):
         sz.SZdata[name] = {"type": type, "value": value}

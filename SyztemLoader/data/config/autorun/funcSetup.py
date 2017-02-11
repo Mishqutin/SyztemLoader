@@ -12,7 +12,6 @@ sz.SZData("cls", "SCmd", "os.system('cls')")
 sz.SZData("listdir", "SCmd", "print(os.listdir())")
 sz.SZData("dir", "SCmd", "print(os.getcwd())")
 sz.SZData("show", "SCmd", "sz.showFile(' '.join(args))")
-sz.SZData("exec", "SCmd", "exec(' '.join(args))")
 sz.SZData("title", "SCmd", "os.system('title {}'.format(' '.join(args)))")
 sz.SZData("set", "SCmd", "sz.SZData(args[0], 'SVar', args[1])")
 

@@ -2,16 +2,18 @@ ISC.do("cls")
 ISC.do("title Qutin")
 print("""
 
-#PBFSEP V0.1.0`
+#PBFSEP V0.1.0
 
 
                           SBPQ OS
 (Early shit/Wczesne gowno)""")
 time.sleep(1)
 while True:
-    ISC.do("cls")
+    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )
+    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])
     cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])
-    print("""\
+    ISC.do("cls")
+    screen = """\
 {}
 --------------------------------------------------------------------|Qutin
 {: <68}|v0
@@ -20,22 +22,23 @@ while True:
 {: <68}|
 {: <68}|LOL
 {: <68}|---------
-{: <68}|Nothing
-{: <68}|  to
-{: <68}|display.
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
-{: <68}|
---------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])
+    print(screen)
     x = input()
     if x:
         ISC.do("output {}".format(x))

@@ -1269,3 +1269,1009 @@ cls
 output a 
 a 
 cls 
+### 11/02/2017--17:11:01 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("exec", "SCmd", "exec(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("output", "SCmd", "cmdInput=ast.literal_eval(sz.SZdata[\'cmdInput\'][\'value\'])\\ndel cmdInput[0]\\ncmdInput.append(\' \'.join(args))\\nsz.SZdata[\'cmdInput\'][\'value\']=str(cmdInput)")\n', '\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output exec SVar('test', importTest()) 
+exec SVar('test', importTest()) 
+### 11/02/2017--17:11:32 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("exec", "SCmd", "exec(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("output", "SCmd", "cmdInput=ast.literal_eval(sz.SZdata[\'cmdInput\'][\'value\'])\\ndel cmdInput[0]\\ncmdInput.append(\' \'.join(args))\\nsz.SZdata[\'cmdInput\'][\'value\']=str(cmdInput)")\n', '\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output exec sz.SVar("test", importTest()) 
+exec sz.SVar("test", importTest()) 
+### 11/02/2017--17:13:06 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("exec", "SCmd", "exec(\' \'.join(args), globals())")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("output", "SCmd", "cmdInput=ast.literal_eval(sz.SZdata[\'cmdInput\'][\'value\'])\\ndel cmdInput[0]\\ncmdInput.append(\' \'.join(args))\\nsz.SZdata[\'cmdInput\'][\'value\']=str(cmdInput)")\n', '\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output exec sz.SVar("test", importTest()) 
+exec sz.SVar("test", importTest()) 
+### 11/02/2017--17:16:03 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("output", "SCmd", "cmdInput=ast.literal_eval(sz.SZdata[\'cmdInput\'][\'value\'])\\ndel cmdInput[0]\\ncmdInput.append(\' \'.join(args))\\nsz.SZdata[\'cmdInput\'][\'value\']=str(cmdInput)")\n', '\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output exec chdfgihjkkuyi 
+exec chdfgihjkkuyi 
+cls 
+cls 
+cls 
+cls 
+cls 
+cls 
+cls 
+cls 
+cls 
+cls 
+output terminate 
+terminate 
+### 11/02/2017--19:00:21 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("output", "SCmd", "cmdInput=ast.literal_eval(sz.SZdata[\'cmdInput\'][\'value\'])\\ndel cmdInput[0]\\ncmdInput.append(\' \'.join(args))\\nsz.SZdata[\'cmdInput\'][\'value\']=str(cmdInput)")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', '\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output exec global importTest 
+exec global importTest 
+cls 
+output exec SVar("test", importTest()) 
+exec SVar("test", importTest()) 
+cls 
+output test 
+test 
+cls 
+output exec global importTest() 
+exec global importTest() 
+cls 
+output exec global importTe 
+exec global importTe 
+cls 
+output exec global importTest()\nSVar("test2", importTest()) 
+exec global importTest()\nSVar("test2", importTest()) 
+cls 
+output clear 
+clear 
+cls 
+output exec appendCI("lol")\nappendCI("secondLol") 
+exec appendCI("lol")\nappendCI("secondLol") 
+cls 
+### 11/02/2017--19:15:23 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output output 123 
+output 123 
+cls 
+output output 123 
+output 123 
+cls 
+### 11/02/2017--19:20:36 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output output 123 
+output 123 
+cls 
+output output 123 
+output 123 
+cls 
+output output 123 
+output 123 
+cls 
+output ddfsg 
+ddfsg 
+cls 
+output bfd 
+bfd 
+cls 
+output bf 
+bf 
+cls 
+output sdb 
+sdb 
+cls 
+output f 
+f 
+cls 
+output bndbg 
+bndbg 
+cls 
+output dfb 
+dfb 
+cls 
+cls 
+cls 
+cls 
+output output 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000lol xd so long idk what could happen if i will try to send this to appendCI() 
+output 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000lol xd so long idk what could happen if i will try to send this to appendCI() 
+cls 
+output clear 
+clear 
+cls 
+output output 12348624444444444444547812657836589236157896398567825643789569836257823458934895683465 
+output 12348624444444444444547812657836589236157896398567825643789569836257823458934895683465 
+cls 
+output ls 
+ls 
+cls 
+### 11/02/2017--19:24:40 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output ls 
+ls 
+cls 
+### 11/02/2017--19:25:29 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[0], cmdInput[1], cmdInput[2], cmdInput[3], cmdInput[4], cmdInput[5], cmdInput[6], cmdInput[7], cmdInput[8], cmdInput[9], cmdInput[10], cmdInput[11], cmdInput[12], cmdInput[13], cmdInput[14], cmdInput[15], cmdInput[16], cmdInput[17], cmdInput[18], cmdInput[19], cmdInput[20]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output ls 
+ls 
+cls 
+### 11/02/2017--19:27:52 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[-21], cmdInput[-20], cmdInput[-19], cmdInput[-18], cmdInput[-17], cmdInput[-16], cmdInput[-15], cmdInput[-14], cmdInput[-13], cmdInput[-12], cmdInput[-11], cmdInput[-10], cmdInput[-9], cmdInput[-8], cmdInput[-7], cmdInput[-6], cmdInput[-5], cmdInput[-4], cmdInput[-3], cmdInput[-2], cmdInput[-1]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output lol 
+lol 
+cls 
+output output xd 
+output xd 
+cls 
+output output xdsdfjhhgfddvjndfigheruiwhgvi4yt574y38hyc8f4h387h8vh74vh38ctg4h57yh58hncv48htgv84hg85g4y 
+output xdsdfjhhgfddvjndfigheruiwhgvi4yt574y38hyc8f4h387h8vh74vh38ctg4h57yh58hncv48htgv84hg85g4y 
+cls 
+cls 
+### 11/02/2017--19:38:01 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'currentPageScroll = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], cmdInput[ currentPageScroll[13] ], cmdInput[ currentPageScroll[12] ], cmdInput[ currentPageScroll[11] ], cmdInput[ currentPageScroll[10] ], cmdInput[ currentPageScroll[9] ], cmdInput[ currentPageScroll[8] ], cmdInput[ currentPageScroll[7] ], cmdInput[ currentPageScroll[6] ], cmdInput[ currentPageScroll[5] ], cmdInput[ currentPageScroll[4] ], cmdInput[ currentPageScroll[3] ], cmdInput[ currentPageScroll[2] ], cmdInput[ currentPageScroll[1] ], cmdInput[ currentPageScroll[0] ]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output dfs 
+dfs 
+cls 
+output adfsggh 
+adfsggh 
+cls 
+output dfg 
+dfg 
+cls 
+output wdf 
+wdf 
+cls 
+output asgd 
+asgd 
+cls 
+### 11/02/2017--19:51:40 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'currentPageScroll = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], cmdInput[ currentPageScroll[13] ], cmdInput[ currentPageScroll[12] ], cmdInput[ currentPageScroll[11] ], cmdInput[ currentPageScroll[10] ], cmdInput[ currentPageScroll[9] ], cmdInput[ currentPageScroll[8] ], cmdInput[ currentPageScroll[7] ], cmdInput[ currentPageScroll[6] ], cmdInput[ currentPageScroll[5] ], cmdInput[ currentPageScroll[4] ], cmdInput[ currentPageScroll[3] ], cmdInput[ currentPageScroll[2] ], cmdInput[ currentPageScroll[1] ], cmdInput[ currentPageScroll[0] ]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output xd 
+xd 
+cls 
+output asdfg 
+asdfg 
+cls 
+output g 
+g 
+cls 
+output dfg 
+dfg 
+cls 
+### 11/02/2017--19:52:31 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'currentPageScroll = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], cmdInput[ currentPageScroll[13] ], cmdInput[ currentPageScroll[12] ], cmdInput[ currentPageScroll[11] ], cmdInput[ currentPageScroll[10] ], cmdInput[ currentPageScroll[9] ], cmdInput[ currentPageScroll[8] ], cmdInput[ currentPageScroll[7] ], cmdInput[ currentPageScroll[6] ], cmdInput[ currentPageScroll[5] ], cmdInput[ currentPageScroll[4] ], cmdInput[ currentPageScroll[3] ], cmdInput[ currentPageScroll[2] ], cmdInput[ currentPageScroll[1] ], cmdInput[ currentPageScroll[0] ]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+cls 
+output sdf 
+sdf 
+cls 
+output sdaf 
+sdaf 
+cls 
+output sf 
+sf 
+cls 
+output ssdfgvfvdsfv 
+ssdfgvfvdsfv 
+cls 
+output sdf 
+sdf 
+cls 
+output sdaf 
+sdaf 
+cls 
+output sdfg 
+sdfg 
+cls 
+output asfg 
+asfg 
+cls 
+output adsf 
+adsf 
+cls 
+output asdf 
+asdf 
+cls 
+output asdf 
+asdf 
+cls 
+output asd 
+asd 
+cls 
+output fasd 
+fasd 
+cls 
+output fasd 
+fasd 
+cls 
+output fasdg 
+fasdg 
+cls 
+output sadfg 
+sadfg 
+cls 
+output asdg 
+asdg 
+cls 
+output asdfg 
+asdfg 
+cls 
+output asdg 
+asdg 
+cls 
+output asdfg 
+asdfg 
+cls 
+output asdg 
+asdg 
+cls 
+output asdg 
+asdg 
+cls 
+output asfg 
+asfg 
+cls 
+output asg 
+asg 
+cls 
+output sfg 
+sfg 
+cls 
+output sdfgs 
+sdfgs 
+cls 
+output fgs 
+fgs 
+cls 
+output dfsdf 
+dfsdf 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+### 11/02/2017--19:54:03 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', "currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], cmdInput[ currentPageScroll[13] ], cmdInput[ currentPageScroll[12] ], cmdInput[ currentPageScroll[11] ], cmdInput[ currentPageScroll[10] ], cmdInput[ currentPageScroll[9] ], cmdInput[ currentPageScroll[8] ], cmdInput[ currentPageScroll[7] ], cmdInput[ currentPageScroll[6] ], cmdInput[ currentPageScroll[5] ], cmdInput[ currentPageScroll[4] ], cmdInput[ currentPageScroll[3] ], cmdInput[ currentPageScroll[2] ], cmdInput[ currentPageScroll[1] ], cmdInput[ currentPageScroll[0] ]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output 1 
+1 
+cls 
+output 2 
+2 
+cls 
+output 3 
+3 
+cls 
+output 4 
+4 
+cls 
+output 5 
+5 
+cls 
+output 6 
+6 
+cls 
+output 7 
+7 
+cls 
+output 8 
+8 
+cls 
+output 9 
+9 
+cls 
+output 0 
+0 
+cls 
+output 1 
+1 
+cls 
+output 2 
+2 
+cls 
+output 3 
+3 
+cls 
+output 4 
+4 
+cls 
+output 5 
+5 
+cls 
+output 6 
+6 
+cls 
+output 7 
+7 
+cls 
+output 8 
+8 
+cls 
+output 9 
+9 
+cls 
+output 0 
+0 
+cls 
+output 1 
+1 
+cls 
+output 2 
+2 
+cls 
+output 3 
+3 
+cls 
+output 4 
+4 
+cls 
+output 5 
+5 
+cls 
+output 6 
+6 
+cls 
+output 7 
+7 
+cls 
+output 8 
+8 
+cls 
+output 9 
+9 
+cls 
+output 0 
+0 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+output scrollDown 
+scrollDown 
+cls 
+### 11/02/2017--19:55:13 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', "currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], cmdInput[ currentPageScroll[13] ], cmdInput[ currentPageScroll[12] ], cmdInput[ currentPageScroll[11] ], cmdInput[ currentPageScroll[10] ], cmdInput[ currentPageScroll[9] ], cmdInput[ currentPageScroll[8] ], cmdInput[ currentPageScroll[7] ], cmdInput[ currentPageScroll[6] ], cmdInput[ currentPageScroll[5] ], cmdInput[ currentPageScroll[4] ], cmdInput[ currentPageScroll[3] ], cmdInput[ currentPageScroll[2] ], cmdInput[ currentPageScroll[1] ], cmdInput[ currentPageScroll[0] ]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output currentPageScroll 
+currentPageScroll 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output currentPageScroll 
+currentPageScroll 
+cls 
+### 11/02/2017--19:55:48 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0`\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    print("""\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|Nothing\n', '{: <68}|  to\n', '{: <68}|display.\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '{: <68}|\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], cmdInput[ currentPageScroll[13] ], cmdInput[ currentPageScroll[12] ], cmdInput[ currentPageScroll[11] ], cmdInput[ currentPageScroll[10] ], cmdInput[ currentPageScroll[9] ], cmdInput[ currentPageScroll[8] ], cmdInput[ currentPageScroll[7] ], cmdInput[ currentPageScroll[6] ], cmdInput[ currentPageScroll[5] ], cmdInput[ currentPageScroll[4] ], cmdInput[ currentPageScroll[3] ], cmdInput[ currentPageScroll[2] ], cmdInput[ currentPageScroll[1] ], cmdInput[ currentPageScroll[0] ]))\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output 1 
+1 
+cls 
+output 23 
+23 
+cls 
+output 342 
+342 
+cls 
+output 53 
+53 
+cls 
+output 5667 
+5667 
+cls 
+output 678 
+678 
+cls 
+output 345123 
+345123 
+cls 
+output 421 
+421 
+cls 
+output 3453 
+3453 
+cls 
+output 253 
+253 
+cls 
+output 63245 
+63245 
+cls 
+output 3456 
+3456 
+cls 
+cls 
+output dfgsd 
+dfgsd 
+cls 
+output d 
+d 
+cls 
+output sfgb 
+sfgb 
+cls 
+output fgb 
+fgb 
+cls 
+output dfgb 
+dfgb 
+cls 
+output dfs 
+dfs 
+cls 
+output sfdg 
+sfdg 
+cls 
+output 546 
+546 
+cls 
+output 3465 
+3465 
+cls 
+output 35 
+35 
+cls 
+output 634 
+634 
+cls 
+output sc 
+sc 
+cls 
+output vsd 
+vsd 
+cls 
+output fgv 
+fgv 
+cls 
+output lol 
+lol 
+cls 
+output zdsd 
+zdsd 
+cls 
+output sdfwete 
+sdfwete 
+cls 
+output asdfsf 
+asdfsf 
+cls 
+output sadfs 
+sadfs 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+output scrollUp 
+scrollUp 
+cls 
+### 11/02/2017--20:15:13 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'sidebar = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ]\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+### 11/02/2017--20:15:46 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'sidebar = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ]\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', 'print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+### 11/02/2017--20:15:58 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'sidebar = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ]\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", '    ISC.do("cls")\n', '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output lol 
+lol 
+cls 
+output fd 
+fd 
+cls 
+output sdf 
+sdf 
+cls 
+output sfg 
+sfg 
+cls 
+output sdg 
+sdg 
+cls 
+output sgf 
+sgf 
+cls 
+output sgf 
+sgf 
+cls 
+output sfg 
+sfg 
+cls 
+output sdg 
+sdg 
+cls 
+output ewrg 
+ewrg 
+cls 
+output gv 
+gv 
+cls 
+output v 
+v 
+cls 
+output fv 
+fv 
+cls 
+output sdfv 
+sdfv 
+cls 
+output c 
+c 
+cls 
+output ggvergr 
+ggvergr 
+cls 
+output gvd 
+gvd 
+cls 
+output g 
+g 
+cls 
+output sg 
+sg 
+cls 
+output dcfg 
+dcfg 
+cls 
+output d 
+d 
+cls 
+output g 
+g 
+cls 
+output dgdfv 
+dgdfv 
+cls 
+output cgg 
+cgg 
+cls 
+### 11/02/2017--20:43:22 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZDara("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+### 11/02/2017--20:44:27 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZDara("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+### 11/02/2017--20:45:02 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZData("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output test 
+test 
+cls 
+output test 1+2 
+test 1+2 
+cls 
+output test 
+test 
+### 11/02/2017--20:45:40 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZData("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output test 1+2 
+test 1+2 
+cls 
+output test 
+test 
+### 11/02/2017--20:46:44 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZData("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output test 
+test 
+cls 
+output test 1+2 
+test 1+2 
+cls 
+output test 
+test 
+cls 
+### 11/02/2017--20:49:49 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', 'sz.SZData("editSidebar", "SCmd", "editSidebar(args[0], args[1])")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZData("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output editSidebar 1 abc 
+editSidebar 1 abc 
+### 11/02/2017--20:50:40 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', 'sz.SZData("editSidebar", "SCmd", "editSidebar(args[0], args[1])")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZData("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output editSidebar 0 hello 
+editSidebar 0 hello 
+cls 
+output editSidebar 2 lol lol 
+editSidebar 2 lol lol 
+cls 
+### 11/02/2017--20:51:39 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', 'sz.SZData("editSidebar", "SCmd", "editSidebar(args[0], \' \'.join(args[1:]))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZData("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def importTest():\n', '    return 256'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
+cls 
+output editSidebar 1 hello world! 
+editSidebar 1 hello world! 
+cls 
+output terminate 
+terminate 
+### 11/02/2017--20:56:31 ### 
++Python file funcSetup.py 
+['# Setups all basic varaibles etc.\n', '# If you want use commands with arguments simply put args[int] in place.\n', '\n', '# SCmd\n', 'sz.SZData("print", "SCmd", "print( ast.literal_eval( \' \'.join(args[0:]) ) )")\n', 'sz.SZData("getSZdata", "SCmd", "print(sz.SZdata)")\n', 'sz.SZData("termColor", "SCmd", "os.system(\'color {}\'.format(args[0]))")\n', 'sz.SZData("terminate", "SCmd", "exit()")\n', 'sz.SZData("python", "SCmd", "ISC.python(args[0])")\n', 'sz.SZData("cd", "SCmd", "os.chdir(\' \'.join(args))")\n', 'sz.SZData("cls", "SCmd", "os.system(\'cls\')")\n', 'sz.SZData("listdir", "SCmd", "print(os.listdir())")\n', 'sz.SZData("dir", "SCmd", "print(os.getcwd())")\n', 'sz.SZData("show", "SCmd", "sz.showFile(\' \'.join(args))")\n', 'sz.SZData("title", "SCmd", "os.system(\'title {}\'.format(\' \'.join(args)))")\n', 'sz.SZData("set", "SCmd", "sz.SZData(args[0], \'SVar\', args[1])")\n', '\n', '# SVars\n', 'sz.SZData("test", "SVar", "spam eggs")\n'] 
+eof+ 
++Python file qutinSetup.py 
+['# SCmd\n', 'sz.SZData("clear", "SCmd", \'clearCI()\')\n', 'sz.SZData("ls", "SCmd", "listDir()")\n', 'sz.SZData("exec", "SCmd", "try:\\n   exec(\' \'.join(args), globals())\\nexcept:\\n  appendCI(\'Failed to execute\')")\n', 'sz.SZData("output", "SCmd", "appendCI(\' \'.join(args))")\n', 'sz.SZData("scrollUp", "SCmd", "scrollUp()")\n', 'sz.SZData("scrollDown", "SCmd", "scrollDown()")\n', 'sz.SZData("note", "SCmd", "editSidebar(args[0], \' \'.join(args[1:]))")\n', '# SVars\n', 'sz.SZData("cmdInput", "SVar", \'["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]\')\n', 'sz.SZData("QWorking", "SVar", "Yeah! :D")\n', 'sz.SZData("currentPageScroll", \'SVar\', \'[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20, -21]\')\n', 'sz.SZData("sidebarContent", "SVar", \'["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]\')\n', '\n', 'def TestFunc():\n', '    return 256\n', '\n', 'import time'] 
+eof+ 
+python poorFile.py 
+python poorFile.py 
++Python file poorFile.py 
+['ISC.do("cls")\n', 'ISC.do("title Qutin")\n', 'global time\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(1)\n', 'while True:\n', "    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )\n", "    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])\n", '    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])\n', '    ISC.do("cls")\n', '    screen = """\\\n', '{}\n', '--------------------------------------------------------------------|Qutin\n', '{: <68}|v0\n', '{: <68}|\n', '{: <68}|PreInDev\n', '{: <68}|\n', '{: <68}|LOL\n', '{: <68}|---------\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '{: <68}|{:.9}\n', '--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])\n', '    print(screen)\n', '    x = input()\n', '    if x:\n', '        ISC.do("output {}".format(x))\n', '        ISC.do(x)\n'] 
+eof+ 
+cls 
+title Qutin 
