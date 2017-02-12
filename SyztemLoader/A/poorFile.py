@@ -43,7 +43,7 @@ while True:
     if mode == 'console':
         x = input()
         if x:
-            ISC.do("output {}".format(x))
+            if sz.SZdata['echo']['value']=='1': ISC.do("output {}".format(x))
             ISC.do(x)
     elif mode == 'scroll':
         editSidebar(0, 'Scrolling')

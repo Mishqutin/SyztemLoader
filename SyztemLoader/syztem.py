@@ -21,6 +21,11 @@ class ISC:
                 else:
                     appendCI(sz.SZdata[p[0]]['value'])
                     return sz.SZdata[p[0]]['value']
+        else:
+            try:
+                appendCI(eval(cmd))
+            except:
+                appendCI('ISC: Invalid parameters.')
     def python(path):
         f = open(path, "r")
         sz.logTo(sz.config["sDir"]+"\\log.txt", "+Python file {}".format(path))
