@@ -1,4 +1,4 @@
-# SCmd
+# SCmds
 sz.SZData("clear", "SCmd", 'clearCI()')
 sz.SZData("ls", "SCmd", "listDir()")
 sz.SZData("exec", "SCmd", "try:\n   exec(' '.join(args), globals())\nexcept:\n  appendCI('Failed to execute')")
@@ -10,6 +10,25 @@ sz.SZData("mode", "SCmd", "sz.SZdata['termMode']['value'] = args[0]")
 sz.SZData("cat", "SCmd", "showFile(args[0])")
 sz.SZData("sleep", "SCmd", "time.sleep(args[0])")
 sz.SZData("alias", "SCmd", 'sz.SZData(args[1], "SCmd", sz.SZdata[args[0]]["value"])')
+
+# Long SCmds
+sz.SZData("help", "SCmd", '''\
+appendCI("This is the list of commands:")
+appendCI("Syntax: <cmd> 0 1 - 0 and 1 represents argumets.")
+appendCI("clear - Clears output screen.")
+appendCI("output 0 - Prints string to output screen.")
+appendCI("title 0 - Sets window\'s title.")
+appendCI("set 0 1 - Defines a new SVar: 0 - name, 1 - value.")
+appendCI("termColor 0 - Like color in Winshit cmd.")
+appendCI("terminate - Exit.")
+appendCI("ls - List files in current directory.")
+appendCI("cd 0 - Change directory.")
+appendCI("cat 0 - Shows file content.")
+appendCI("exec 0 - Execute Python things idk how I could explain this.")
+appendCI("alias 0 1 - 0:Command 1:Alias name.")
+appendCI("sleep 0 - Wait secs.")
+appendCI("mode 0 - Change mode. Try mode scroll.")
+''')
 
 # SVars
 sz.SZData("cmdInput", "SVar", '["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]')
