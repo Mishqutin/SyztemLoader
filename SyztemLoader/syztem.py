@@ -37,7 +37,7 @@ class ISC:
 
 # Functions
 def appendCI(txt):
-    txt = str(txt)
+    txt = str(txt).replace('\n', '')
     cmdInput=ast.literal_eval(sz.SZdata['cmdInput']['value'])
     line = ''
     for i in txt:
@@ -76,7 +76,7 @@ def showFile(path):
     f = open(path, 'r')
     counter = 0
     for i in f.readlines():
-        appendCI('{}| {}'.format(counter, i.replace('\n', '')))
+        appendCI('{}| {}'.format(counter, i))
         counter += 1
 
 class sz:
