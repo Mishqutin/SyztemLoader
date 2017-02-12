@@ -1,4 +1,5 @@
 ISC.do("cls")
+os.chdir("{}\\{}".format(sz.config["sDir"], "data\\home"))
 ISC.do("title Qutin")
 print("""
 
