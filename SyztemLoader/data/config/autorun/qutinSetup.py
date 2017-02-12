@@ -7,6 +7,7 @@ sz.SZData("scrollUp", "SCmd", "scrollUp()")
 sz.SZData("scrollDown", "SCmd", "scrollDown()")
 sz.SZData("note", "SCmd", "editSidebar(args[0], ' '.join(args[1:]))")
 sz.SZData("mode", "SCmd", "sz.SZdata['termMode']['value'] = args[0]")
+sz.SZData("cat", "SCmd", "showFile(args[0])")
 # SVars
 sz.SZData("cmdInput", "SVar", '["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]')
 sz.SZData("QWorking", "SVar", "Yeah! :D")

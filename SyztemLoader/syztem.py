@@ -6,7 +6,7 @@ import subprocess
 import msvcrt
 class ISC:
     def do(cmd):
-        sz.logTo(sz.config["sDir"]+"\\log.txt", str(cmd))
+        # sz.logTo(sz.config["sDir"]+"\\log.txt", str(cmd))
         try:
             p = cmd.split()
         except:
@@ -71,6 +71,13 @@ def editSidebar(row, text):
     sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])
     sidebar[int(row)]=text
     sz.SZdata['sidebarContent']['value'] = str(sidebar)
+
+def showFile(path):
+    f = open(path, 'r')
+    counter = 0
+    for i in f.readlines():
+        appendCI('{}| {}'.format(counter, i.replace('\n', '')))
+        counter += 1
 
 class sz:
     SZdata = {}
