@@ -23,9 +23,19 @@ class ISC:
                     return sz.SZdata[p[0]]['value']
         else:
             try:
-                appendCI(eval(cmd))
+                f = open(p[0]+".py", 'r')
+                exec(f.read())
+                f.close()
             except:
-                appendCI('ISC: Invalid parameters.')
+                try:
+                    f = open(sz.config["sDir"]+"\\data\\home\\software\\"+p[0]+".py", 'r')
+                    exec(f.read())
+                    f.close()
+                except:
+                    try:
+                        appendCI(eval(cmd))
+                    except:
+                        appendCI('ISC: Operation unsuccessful.')
     def python(path):
         f = open(path, "r")
         sz.logTo(sz.config["sDir"]+"\\log.txt", "+Python file {}".format(path))
@@ -34,6 +44,8 @@ class ISC:
         f.seek(0)
         exec(f.read())
         f.close()
+    def endTask():
+        FUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCK
 
 # Functions
 def appendCI(txt):
@@ -78,6 +90,38 @@ def showFile(path):
     for i in f.readlines():
         appendCI('{}| {}'.format(counter, i))
         counter += 1
+
+def refresh():
+    currentPageScroll = ast.literal_eval( sz.SZdata['currentPageScroll']['value'] )
+    sidebar = ast.literal_eval(sz.SZdata['sidebarContent']['value'])
+    cmdInput = ast.literal_eval(sz.SZdata["cmdInput"]["value"])
+    ISC.do("cls")
+    screen = """\
+{}
+--------------------------------------------------------------------|PyQutin
+{: <68}|v0
+{: <68}|
+{: <68}|InDev
+{: <68}|
+{: <68}|
+{: <68}|---------
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+{: <68}|{:.9}
+--------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])
+    print(screen)
 
 class sz:
     SZdata = {}

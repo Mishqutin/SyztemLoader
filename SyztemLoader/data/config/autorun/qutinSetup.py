@@ -28,6 +28,10 @@ appendCI("exec 0 - Execute Python things idk how I could explain this.")
 appendCI("alias 0 1 - 0:Command 1:Alias name.")
 appendCI("sleep 0 - Wait secs.")
 appendCI("mode 0 - Change mode. Try mode scroll.")
+appendCI("----")
+appendCI("Enter SVar name to get it\'s value.")
+appendCI("Enter SVar name and any value to change it\'s value.")
+appendCI("You can also eval expressions just by typing them.")
 ''')
 
 # SVars
