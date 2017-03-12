@@ -15,7 +15,7 @@ if not read["complete"]:
 	f = open("load.txt", "w")
 	f.write(read)
 	f.close()
-    os.system("mkdir {}\\documents\\Syztem\\prgs")
+	os.system("mkdir {}\\documents\\Syztem\\prgs".format(os.getenv('userprofile')))
 	exit()
 lista = [read["first"], read["second"], read["third"]]
 if lista[0]=="A":
@@ -318,6 +318,7 @@ def edit(page):
 		read = readWork
 	if page==11:
 		readWork = {"complete": True, "sDir": curDir, "runDir": curDir + "\data\local", "first": "A", "second": "B", "third": "C"}
+		os.system("mkdir {}\\documents\\Syztem\\prgs".format(os.getenv('userprofile')))
 		main()
 
 

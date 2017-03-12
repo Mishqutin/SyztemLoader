@@ -1,0 +1,21 @@
+Shitty manual in how to do something with this piece of shit.
+Step 1:
+Start syz.bat (It is not recommended to run it as an admin)
+Step 2:
+When you are able to see '-Press Shift+W...' do it so you can access shit that looks like BIOS.
+Step 3:
+Press Shift+R. config.py will configure some thingy things and create dirs at your documents (Syztem\prgs).
+Step 4:
+Press w to save.
+Step 5:
+Have fun and try help command.
+
+Where to put fucking programs that can be run by PyQutin (this is also a priority of where it looks for files):
+*Current Workin' Dir
+*SyztemLoader\data\home\software
+*Documents\Syztem\prgs
+Every program must be .py.
+Programs are executed by: exec(<file-content>)
+
+TextEditor is now fuckin stupid so don't ever try to use it.
+Try edit <file>
