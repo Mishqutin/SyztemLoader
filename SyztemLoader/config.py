@@ -15,6 +15,7 @@ if not read["complete"]:
 	f = open("load.txt", "w")
 	f.write(read)
 	f.close()
+    os.system("mkdir {}\\documents\\Syztem\\prgs")
 	exit()
 lista = [read["first"], read["second"], read["third"]]
 if lista[0]=="A":

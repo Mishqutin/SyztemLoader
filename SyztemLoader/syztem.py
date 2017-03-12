@@ -33,9 +33,14 @@ class ISC:
                     f.close()
                 except:
                     try:
-                        appendCI(eval(cmd))
+                        f = open(os.getenv('userprofile')+'\\documents\\Syztem\\prgs\\{}.py'.format(p[0]), 'r')
+                        exec(f.read())
+                        f.close()
                     except:
-                        appendCI('ISC: Operation unsuccessful.')
+                        try:
+                            appendCI(eval(cmd))
+                        except:
+                            appendCI('ISC: Operation unsuccessful.')
     def python(path):
         f = open(path, "r")
         sz.logTo(sz.config["sDir"]+"\\log.txt", "+Python file {}".format(path))
