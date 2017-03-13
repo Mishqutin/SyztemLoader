@@ -39,3 +39,14 @@ DON'T EVER TRY TO USE SPACES LIKE 1 + 1 because they won't be included.
 
 Put somewhere a file, eg. YoMama.txt and put there anything you can type in PyQutin console.
 You can run it by sz YoMama.txt.
+
+Modes:
+Type in 'mode scroll' and then use 'w' or 's' to scroll up n down or 'q' to fuck it out.
+
+Credits:
+Mishqutin (Czytaj: Miszkitin kurfa!)
+Waldoo, Waldzio, Waldek, Wald, Waldemar, Waldemar, Brat, Brader, Magician
+Majka the cat that sits on the table when I am doing all that stuff.
+Marcel the Wi-Fi (read vaij faiwj (Wat?)) printer. It sometimes prints all the content of any file I try to edit (Because I often press
+'Print' instead of 'Edit').
+JajkoReborn (Jajko - Egg). Router that magicaly brings internet to my computer (I think he's working together with modem!).
