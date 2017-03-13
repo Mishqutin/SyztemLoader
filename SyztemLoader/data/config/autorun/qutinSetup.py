@@ -8,8 +8,9 @@ sz.SZData("scrollDown", "SCmd", "scrollDown()")
 sz.SZData("note", "SCmd", "editSidebar(args[0], ' '.join(args[1:]))")
 sz.SZData("mode", "SCmd", "sz.SZdata['termMode']['value'] = args[0]")
 sz.SZData("cat", "SCmd", "showFile(args[0])")
-sz.SZData("sleep", "SCmd", "time.sleep(args[0])")
+sz.SZData("sleep", "SCmd", "time.sleep(float(args[0]))")
 sz.SZData("alias", "SCmd", 'sz.SZData(args[1], "SCmd", sz.SZdata[args[0]]["value"])')
+sz.SZData("sz", "SCmd", "ISC.exeSzFull(args[0])")
 
 # Long SCmds
 sz.SZData("help", "SCmd", '''\

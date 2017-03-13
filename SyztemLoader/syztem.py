@@ -17,7 +17,7 @@ class ISC:
                 
             elif sz.SZdata[p[0]]["type"]=="SVar":
                 if len(p)>1:
-                    sz.SVar(p[0], eval(p[1]))
+                    sz.SVar(p[0], SzDataEval(p[1]))
                 else:
                     appendCI(sz.SZdata[p[0]]['value'])
                     return sz.SZdata[p[0]]['value']
@@ -51,6 +51,25 @@ class ISC:
         f.close()
     def endTask():
         FUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCK
+    def exeSzFull(path):
+        try:
+            ISC.exeSz(path)
+        except:
+            try:
+                ISC.exeSz(sz.config["sDir"]+"\\data\\home\\software\\"+path)
+            except:
+                try:
+                    ISC.exeSz(os.getenv('userprofile')+'\\documents\\Syztem\\prgs\\'+path)
+                except:
+                    appendCI("File does not exist or it is corrupted.")
+    def exeSz(path):
+        f = open(path)
+        lines = f.readlines()
+        f.close()
+        for i in lines:
+            ISC.do(i)
+            refresh()
+            
 
 # Functions
 def appendCI(txt):
@@ -127,6 +146,12 @@ def refresh():
 {: <68}|{:.9}
 --------------------------------------------------------------------^---------""".format( os.getcwd()+" "*(68-len( os.getcwd() ))+"|==", cmdInput[ currentPageScroll[20] ], cmdInput[ currentPageScroll[19] ], cmdInput[ currentPageScroll[18] ], cmdInput[ currentPageScroll[17] ], cmdInput[ currentPageScroll[16] ], cmdInput[ currentPageScroll[15] ], cmdInput[ currentPageScroll[14] ], sidebar[0], cmdInput[ currentPageScroll[13] ], sidebar[1], cmdInput[ currentPageScroll[12] ], sidebar[2], cmdInput[ currentPageScroll[11] ], sidebar[3], cmdInput[ currentPageScroll[10] ], sidebar[4], cmdInput[ currentPageScroll[9] ], sidebar[5], cmdInput[ currentPageScroll[8] ], sidebar[6], cmdInput[ currentPageScroll[7] ], sidebar[7], cmdInput[ currentPageScroll[6] ], sidebar[8], cmdInput[ currentPageScroll[5] ], sidebar[9], cmdInput[ currentPageScroll[4] ], sidebar[10], cmdInput[ currentPageScroll[3] ], sidebar[11], cmdInput[ currentPageScroll[2] ], sidebar[12], cmdInput[ currentPageScroll[1] ], sidebar[13], cmdInput[ currentPageScroll[0] ], sidebar[14])
     print(screen)
+
+def SzDataEval(string):
+    for i in sz.SZdata:
+        if i in string:
+            string = string.replace(i, "sz.SZdata['{}']['value']".format(i))
+    return eval(string)
 
 class sz:
     SZdata = {}
