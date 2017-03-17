@@ -17,7 +17,7 @@ class ISC:
                 
             elif sz.SZdata[p[0]]["type"]=="SVar":
                 if len(p)>1:
-                    sz.SVar(p[0], SzDataEval(p[1]))
+                    sz.SZdata[p[0]]["value"] = SzDataEval(' '.join(p[1:]))
                 else:
                     appendCI(sz.SZdata[p[0]]['value'])
                     return sz.SZdata[p[0]]['value']
@@ -148,9 +148,14 @@ def refresh():
     print(screen)
 
 def SzDataEval(string):
+    try:
+        if type(eval(string))==str:
+            return string
+    except:
+        pass
     for i in sz.SZdata:
         if i in string:
-            string = string.replace(i, "sz.SZdata['{}']['value']".format(i))
+            string = string.replace(i, sz.SZdata[i]['value'])
     return eval(string)
 
 class sz:
