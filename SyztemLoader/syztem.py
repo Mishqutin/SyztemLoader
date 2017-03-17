@@ -177,7 +177,7 @@ class sz:
         
     def SVar(var, value=None):
         try:
-            if value:
+            if value!=None:
                 exec('sz.SZdata[var]["value"] = {}'.format(value))
             else:
                 return sz.SZdata[var]["value"]

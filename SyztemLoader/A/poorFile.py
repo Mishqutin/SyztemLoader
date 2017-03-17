@@ -11,7 +11,13 @@ print("""
 (Early shit/Wczesne gowno)""")
 time.sleep(0.75)
 
-
+try:
+    f = open(sz.config["sDir"]+"\\data\\home\\user\\startup.txt")
+    fileData = f.readlines()
+    f.close()
+    ISC.exeSzFull(fileData[0])
+except:
+    appendCI("Cannot execute startup file.")
 
 while True:
     mode = sz.SZdata['termMode']['value']
@@ -19,7 +25,7 @@ while True:
     if mode == 'console':
         x = input()
         if x:
-            if sz.SZdata['echo']['value']=='1': ISC.do("output {}".format(x))
+            if sz.SZdata['echo']['value']==1: ISC.do("output {}".format(x))
             ISC.do(x)
     elif mode == 'scroll':
         editSidebar(0, 'Scrolling')
