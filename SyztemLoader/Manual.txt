@@ -10,6 +10,9 @@ Press w to save.
 Step 5:
 Have fun and try help command.
 
+And first of all..
+NEVER EVER FOREVER FEVER TRY TO USE HELP SCMD!!!! IT IS OUTDATED!!!
+
 Where to put fucking programs that can be run by PyQutin (this is also a priority of where it looks for files):
 *Current Workin' Dir
 *SyztemLoader\data\home\software
@@ -22,20 +25,22 @@ Try edit <file>
 
 Variables:
 First of all you will need to declare or define a variable. I fucking don't know.
-Type in 'set a shit'. It will set var 'a' to string shit. Set always sets variable to string.
+Type in 'dcl a'. It will make 'a' an variable, default value is NOTHING! VOID! OR ANY-NO-NotTHING ELSE FUUUUUCK!!!!
+NOTHING REALLY EXISTS! EVERYTHING IS ALLOWED!!
+Ok ok. Let's calm down.
 Now you can do anything with it.
 Some syntaxes (first line you type second is output):
 a
 <Value of a>
-Any expression (1; 1+2, 42676+3412-5-3425*45/3456*4**543467)
+Any expression (1; 1+2; 42676+3412-5-3425*45/3456*4**543467)
 Result
 a 2
 <Nothing just sets a to int 2>
 a <Any expression>
 <Sets it>
-a a+b
+a $a+$b
 <Sets it's value + var b value>
-DON'T EVER TRY TO USE SPACES LIKE 1 + 1 because they won't be included.
+
 
 Put somewhere a file, eg. YoMama.txt and put there anything you can type in PyQutin console.
 You can run it by sz YoMama.txt.

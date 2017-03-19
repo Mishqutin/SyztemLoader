@@ -2,15 +2,16 @@
 sz.SZData("clear", "SCmd", 'clearCI()')
 sz.SZData("ls", "SCmd", "listDir()")
 sz.SZData("exec", "SCmd", "try:\n   exec(' '.join(args), globals())\nexcept:\n  appendCI('Failed to execute')")
-sz.SZData("output", "SCmd", "appendCI(' '.join(args))")
+sz.SZData("output", "SCmd", "output(' '.join(args))")
 sz.SZData("scrollUp", "SCmd", "scrollUp()")
 sz.SZData("scrollDown", "SCmd", "scrollDown()")
-sz.SZData("note", "SCmd", "editSidebar(args[0], ' '.join(args[1:]))")
+sz.SZData("side", "SCmd", "editSidebar(args[0], ' '.join(args[1:]))")
 sz.SZData("mode", "SCmd", "sz.SZdata['termMode']['value'] = args[0]")
 sz.SZData("cat", "SCmd", "showFile(args[0])")
 sz.SZData("sleep", "SCmd", "time.sleep(float(args[0]))")
 sz.SZData("alias", "SCmd", 'sz.SZData(args[1], "SCmd", sz.SZdata[args[0]]["value"])')
 sz.SZData("sz", "SCmd", "ISC.exeSzFull(args[0])")
+sz.SZData("start", "SCmd", "os.system('start {}'.format(' '.join(args)))")
 
 # Long SCmds
 sz.SZData("help", "SCmd", '''\

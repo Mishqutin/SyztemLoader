@@ -1,4 +1,4 @@
-editorCmd = { 'help':"ISC.do('mode help')", 'edit':"ISC.do('mode edit')", 'exit':'troll', 'save':"f = open(p[1], 'w')\nf.write(''.join(lines))\nf.close()\n"}
+editorCmd = { 'help':"ISC.do('mode help')", 'edit':"ISC.do('mode edit')", 'exit':'ISC.do("mode exit")', 'save':"f = open(p[1], 'w')\nf.write(''.join(lines))\nf.close()\n"}
 f = open(p[1], 'r')
 lines = f.readlines()
 f.close()
@@ -60,4 +60,10 @@ while True:
         if x:
             lines[ int(param[1]) ] = x+'\n'
         ISC.do("mode console")
-    
+    else:
+        editSidebar(0, '')
+        editSidebar(1, '')
+        editSidebar(2, '')
+        editSidebar(3, '')
+        editSidebar(4, '')
+        break

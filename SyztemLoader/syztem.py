@@ -38,7 +38,8 @@ class ISC:
                         f.close()
                     except:
                         try:
-                            appendCI(eval(cmd))
+                            if eval(cmd)!=None:
+                                appendCI(eval(cmd))
                         except:
                             appendCI('ISC: Operation unsuccessful.')
     def python(path):
@@ -50,7 +51,7 @@ class ISC:
         exec(f.read())
         f.close()
     def endTask():
-        FUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCKFUCK
+        errorGFHJKJHGFDFGHJKJHGFDFGHJKJHGFDSFGHJHGFDSDFGHJHGFDFGHJHGFDGHJHGFDFGHJHGFDFGHGFDFGHGFD
     def exeSzFull(path):
         try:
             ISC.exeSz(path)
@@ -67,7 +68,7 @@ class ISC:
         lines = f.readlines()
         f.close()
         for i in lines:
-            ISC.do(i)
+            if i: ISC.do(i)
             refresh()
             
 
@@ -148,15 +149,19 @@ def refresh():
     print(screen)
 
 def SzDataEval(string):
-    try:
-        if type(eval(string))==str:
-            return string
-    except:
-        pass
+
     for i in sz.SZdata:
-        if i in string:
-            string = string.replace(i, sz.SZdata[i]['value'])
+        if '$'+i in string:
+            if type(sz.SZdata[i]['value'])==int: string = string.replace('$'+i, str(sz.SZdata[i]['value']))
+            if type(sz.SZdata[i]['value'])==str: string = string.replace('$'+i, "'"+str(sz.SZdata[i]['value'])+"'")
     return eval(string)
+
+def output(string):
+
+    for i in sz.SZdata:
+        if '$'+i in string:
+            string = string.replace('$'+i, str(sz.SZdata[i]['value']))
+    appendCI(string)
 
 class sz:
     SZdata = {}
