@@ -12,6 +12,7 @@ sz.SZData("sleep", "SCmd", "time.sleep(float(args[0]))")
 sz.SZData("alias", "SCmd", 'sz.SZData(args[1], "SCmd", sz.SZdata[args[0]]["value"])')
 sz.SZData("sz", "SCmd", "ISC.exeSzFull(args[0])")
 sz.SZData("start", "SCmd", "os.system('start {}'.format(' '.join(args)))")
+sz.SZData("setting", "SCmd", "defSet(args[0], args[1])")
 
 # Long SCmds
 sz.SZData("help", "SCmd", '''\

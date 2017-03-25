@@ -16,6 +16,11 @@ if not read["complete"]:
 	f.write(read)
 	f.close()
 	os.system("mkdir {}\\documents\\Syztem\\prgs".format(os.getenv('userprofile')))
+    os.system("mkdir {}\\documents\\Syztem\\shortcuts".format(os.getenv('userprofile')))
+    os.system("mkdir {}\\documents\\Syztem\\settings".format(os.getenv('userprofile')))
+    f = open("{}\\documents\\Syztem\\settings\\defs.txt".format(os.getenv('userprofile')), 'w')
+    f.write('{"termColor":"07"}')
+    f.close()
 	exit()
 lista = [read["first"], read["second"], read["third"]]
 if lista[0]=="A":
