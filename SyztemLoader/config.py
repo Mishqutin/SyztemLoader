@@ -11,6 +11,7 @@ def firstStartConf():
 	os.system("mkdir {}\\documents\\Syztem\\prgs".format(os.getenv('userprofile')))
     os.system("mkdir {}\\documents\\Syztem\\shortcuts".format(os.getenv('userprofile')))
     os.system("mkdir {}\\documents\\Syztem\\settings".format(os.getenv('userprofile')))
+    os.system("mkdir {}".format(os.getenv('userprofile')+'\\documents\\Syztem\\notes'))
     f = open("{}\\documents\\Syztem\\settings\\defs.txt".format(os.getenv('userprofile')), 'w')
     f.write("{'termColor': '07', 'pauseOnExit': 'true'}")
     f.close()

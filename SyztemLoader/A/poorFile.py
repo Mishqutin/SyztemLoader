@@ -25,7 +25,7 @@ while True:
     if mode == 'console':
         x = input()
         if x:
-            if sz.SZdata['echo']['value']==1: appendCI('> '+x)
+            if sz.SZdata['echo']['value']==1: appendCI(sz.SZdata['prompt']['value']+x)
             ISC.do(x)
     elif mode == 'scroll':
         editSidebar(0, 'Scrolling')

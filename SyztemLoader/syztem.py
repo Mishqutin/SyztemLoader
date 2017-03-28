@@ -87,8 +87,8 @@ def appendCI(txt):
     cmdInput.append(line)
     sz.SZdata['cmdInput']['value']=str(cmdInput)
 
-def listDir():
-    for i in os.listdir():
+def listDir(path='.'):
+    for i in os.listdir(path):
         appendCI(i)
 def clearCI():
     sz.SZData("cmdInput", "SVar", '["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  "]')

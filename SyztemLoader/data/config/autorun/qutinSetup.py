@@ -44,3 +44,4 @@ sz.SZData("currentPageScroll", 'SVar', '[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10
 sz.SZData("sidebarContent", "SVar", '["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]')
 sz.SZData("termMode", "SVar", 'console')
 sz.SZData("echo", "SVar", 1)
+sz.SZData("prompt", "SVar", "> ")

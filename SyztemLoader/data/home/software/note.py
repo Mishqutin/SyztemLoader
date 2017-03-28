@@ -1,5 +1,5 @@
 if p[1]=="write":
-    f = open(sz.config['sDir']+'\\data\\home\\user\\notes\\'+p[2]+'.txt', 'w')
+    f = open(os.getenv('userprofile')+'\\documents\\Syztem\\notes\\'+p[2]+'.txt', 'w')
     editSidebar(0, 'To exit')
     editSidebar(1, 'type in')
     editSidebar(2, '@end')
@@ -14,7 +14,9 @@ if p[1]=="write":
         f.write(x+'\n')
     f.close()
 elif p[1]=="read":
-    showFile(sz.config['sDir']+'\\data\\home\\user\\notes\\'+p[2]+'.txt')
+    showFile(os.getenv('userprofile')+'\\documents\\Syztem\\notes\\'+p[2]+'.txt')
+elif p[1]=="list":
+    listDir(os.getenv('userprofile')+'\\documents\\Syztem\\notes')
 
 editSidebar(0, '')
 editSidebar(1, '')
