@@ -15,6 +15,7 @@ sz.SZData("show", "SCmd", "sz.showFile(' '.join(args))")
 sz.SZData("title", "SCmd", "os.system('title {}'.format(' '.join(args)))")
 sz.SZData("dcl", "SCmd", "sz.SZData(args[0], 'SVar', None)")
 sz.SZData("edit", "SCmd", "os.system('start notepad.exe {}'.format(args[0]))")
+sz.SZData("restart", "SCmd", "programRestart()")
 
 # SVars
 sz.SZData("test", "SVar", "spam eggs")

@@ -30,9 +30,11 @@ if not exist load.txt (
 )
 if not exist syztem.py (
 	set error=File not found: syztem.py
+	goto fail
 )
 if not exist exec.py (
 	set error=File not found: exec.py
+	goto fail
 )
 echo Setting environmental variables...
 setx WorkingPath %cd%
@@ -51,8 +53,12 @@ if errorlevel 3 goto restart
 if %config%==1 goto config
 python exec.py
 
+
+set /p makePause =< %userprofile%\Documents\Syztem\settings\makePause.txt
+if %makePause%==false goto end
 echo.
 echo eof
 
 pause >> nul
+:end
 exit

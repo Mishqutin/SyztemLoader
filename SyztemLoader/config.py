@@ -1,14 +1,7 @@
 import os
 import ast
 from msvcrt import getch
-print("Checking load.txt ......")
-f = open("load.txt", "r+")
-read = f.read()
-f.close()
-print(read)
-read = ast.literal_eval(read)
-curDir = str(os.getenv("WorkingPath"))
-if not read["complete"]:
+def firstStartConf():
 	print("First start configuration needed...")
 	read = '{"complete": True, "sDir": "' + curDir + '", "runDir": "' + curDir + '\data\local", "first": "A", "second": "B", "third": "C"}'
 	os.system("del load.txt")
@@ -19,9 +12,18 @@ if not read["complete"]:
     os.system("mkdir {}\\documents\\Syztem\\shortcuts".format(os.getenv('userprofile')))
     os.system("mkdir {}\\documents\\Syztem\\settings".format(os.getenv('userprofile')))
     f = open("{}\\documents\\Syztem\\settings\\defs.txt".format(os.getenv('userprofile')), 'w')
-    f.write('{"termColor":"07"}')
+    f.write("{'termColor': '07', 'pauseOnExit': 'true'}")
     f.close()
 	exit()
+print("Checking load.txt ......")
+f = open("load.txt", "r+")
+read = f.read()
+f.close()
+print(read)
+read = ast.literal_eval(read)
+curDir = str(os.getenv("WorkingPath"))
+if not read["complete"]: firstStartConf()
+
 lista = [read["first"], read["second"], read["third"]]
 if lista[0]=="A":
 	data1 = str(os.getenv("SyztemDataA"))
@@ -322,9 +324,7 @@ def edit(page):
 	if page==10:
 		read = readWork
 	if page==11:
-		readWork = {"complete": True, "sDir": curDir, "runDir": curDir + "\data\local", "first": "A", "second": "B", "third": "C"}
-		os.system("mkdir {}\\documents\\Syztem\\prgs".format(os.getenv('userprofile')))
-		main()
+		firstStartConf()
 
 
 main()

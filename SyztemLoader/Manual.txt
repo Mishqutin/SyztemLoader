@@ -4,10 +4,8 @@ Start syz.bat (It is not recommended to run it as an admin)
 Step 2:
 When you are able to see '-Press Shift+W...' do it so you can access shit that looks like BIOS.
 Step 3:
-Press Shift+R. config.py will configure some thingy things and create dirs at your documents (Syztem\prgs).
+Press Shift+R. config.py will configure some thingy things and create dirs at your documents (Syztem).
 Step 4:
-Press w to save.
-Step 5:
 Have fun and try help command.
 
 And first of all..
@@ -20,7 +18,7 @@ Where to put fucking programs that can be run by PyQutin (this is also a priorit
 Every program must be .py.
 Programs are executed by: exec(<file-content>)
 
-TextEditor is now fuckin stupid so don't ever try to use it.
+TextEditor is still fuckin stupid so don't ever try to use it.
 Try edit <file>
 
 Variables:
@@ -40,13 +38,29 @@ a <Any expression>
 <Sets it>
 a $a+$b
 <Sets it's value + var b value>
+a $a$b
+<Use for strings>
 
 
 Put somewhere a file, eg. YoMama.txt and put there anything you can type in PyQutin console.
-You can run it by sz YoMama.txt.
+You can run it by 'sz YoMama.txt'.
 
 Modes:
 Type in 'mode scroll' and then use 'w' or 's' to scroll up n down or 'q' to fuck it out.
+
+Saving dirs:
+You can save your favourite program path to quickly open it.
+Also you can save a directory.
+saveDir <name> <path>
+To save it.
+open <name>
+To open it.
+open works this way:
+Finds file named <name> and then puts content to variable a.
+os.system("start {}".format(a))
+Think: what could happen if there were spaces in path?
+
+
 
 Credits:
 Mishqutin (Czytaj: Miszkitin kurfa!)

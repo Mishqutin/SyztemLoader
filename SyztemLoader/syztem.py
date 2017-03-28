@@ -4,6 +4,7 @@ import time
 import ast
 import subprocess
 import msvcrt
+import math
 class ISC:
     def do(cmd):
         # sz.logTo(sz.config["sDir"]+"\\log.txt", str(cmd))
@@ -164,19 +165,23 @@ def output(string):
     appendCI(string)
 
 def defSet(targetName, value):
-    # try:
-    f = open("{}\\documents\\Syztem\\settings\\defs.txt".format(os.getenv('userprofile')), 'r')
-    sets = ast.literal_eval(f.read())
-    f.close()
-    sets[targetName] = value
-    os.system('del {}\\documents\\Syztem\\settings\\defs.txt'.format(os.getenv('userprofile')))
-    f = open("{}\\documents\\Syztem\\settings\\defs.txt".format(os.getenv('userprofile')), 'w')
-    f.write(str(sets))
-    f.close()
+    try:
+        f = open("{}\\documents\\Syztem\\settings\\defs.txt".format(os.getenv('userprofile')), 'r')
+        sets = ast.literal_eval(f.read())
+        f.close()
+        sets[targetName] = value
+        os.system('del {}\\documents\\Syztem\\settings\\defs.txt'.format(os.getenv('userprofile')))
+        f = open("{}\\documents\\Syztem\\settings\\defs.txt".format(os.getenv('userprofile')), 'w')
+        f.write(str(sets))
+        f.close()
         
-    # except:
-        # if type(targetName)==str: appendCI("Could not set default value of {}".format(targetName))
-        # else: appendCI("Could not set setting's default value.")
+    except:
+        if type(targetName)==str: appendCI("Could not set default value of {}".format(targetName))
+        else: appendCI("Could not set setting's default value.")
+
+def programRestart():
+    os.system('start {}\\syz.bat'.format(config['sDir']))
+    exit()
 
 class sz:
     SZdata = {}
