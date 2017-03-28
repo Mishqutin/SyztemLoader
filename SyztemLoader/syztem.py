@@ -45,9 +45,9 @@ class ISC:
                             appendCI('ISC: Operation unsuccessful.')
     def python(path):
         f = open(path, "r")
-        sz.logTo(sz.config["sDir"]+"\\log.txt", "+Python file {}".format(path))
-        sz.logTo(sz.config["sDir"]+"\\log.txt", f.readlines())
-        sz.logTo(sz.config["sDir"]+"\\log.txt", "eof+")
+        #sz.logTo(sz.config["sDir"]+"\\log.txt", "+Python file {}".format(path))
+        #sz.logTo(sz.config["sDir"]+"\\log.txt", f.readlines())
+        #sz.logTo(sz.config["sDir"]+"\\log.txt", "eof+")
         f.seek(0)
         exec(f.read())
         f.close()
