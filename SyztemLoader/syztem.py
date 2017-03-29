@@ -63,14 +63,54 @@ class ISC:
                 try:
                     ISC.exeSz(os.getenv('userprofile')+'\\documents\\Syztem\\prgs\\'+path)
                 except:
-                    appendCI("File does not exist or it is corrupted.")
+                    appendCI("File does not exist or it is corrupted:")
+                    appendCI(path)
     def exeSz(path):
         f = open(path)
         lines = f.readlines()
         f.close()
+        labels = {}
+        counter = 0
         for i in lines:
-            if i: ISC.do(i)
+            if i[0]==":":
+                labels[ i[ 1: ].replace( "\n", "" ) ] = counter
+            counter += 1
+        counter = 0
+        gotoUsedThisLine = False
+
+        while True:
+            if counter>=len(lines): break
+            i = lines[counter]
+            
+            if i!="" and i!="\n" and i:
+                if i[0:3]=="if ":
+                    params = i.split()
+                    if params[2]=="goto":
+                        if SzDataEval(params[1].replace(":", "")):
+                            counter = labels[ params[3].replace("\n", "") ]
+                            gotoUsedThisLine = True
+                if i[0] == "#" or i[0] == ":": pass
+                elif i[0:4] == "goto":
+                    try:
+                        counter = labels[ i[5:].replace("\n", "") ]
+                    except:
+                        appendCI("Wrong use of 'goto'.")
+                        break
+                
+                    
+                    
+                    #appendCI( i[ i.find('goto') + 5: ].replace("\n", "") )
+                else:
+                    if gotoUsedThisLine: gotoUsedThisLine = False
+                    else: ISC.do(i)
+            #appendCI(counter)
+            counter += 1
             refresh()
+
+
+                
+
+
             
 
 # Functions
@@ -182,6 +222,15 @@ def defSet(targetName, value):
 def programRestart():
     os.system('start {}\\syz.bat'.format(config['sDir']))
     exit()
+
+def getKey(var):
+    sz.SZData(str(var), "SVar", msvcrt.getch().decode('UTF-8'))
+
+def inputString(var):
+    sz.SZData(str(var), "SVar", input())
+
+def doIf(value, cmd):
+    if SzDataEval(value): ISC.do(cmd)
 
 class sz:
     SZdata = {}

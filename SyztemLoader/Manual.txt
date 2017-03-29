@@ -60,11 +60,31 @@ Finds file named <name> and then puts content to variable a.
 os.system("start {}".format(a))
 Think: what could happen if there were spaces in path?
 
+Labels (only in programs):
+To define a label start with ':' and then type it's name:
+:label
+To go to any label type:
+goto label
+
+Control-Flow (speak as fast as you can! :D):
+if <equation_or_somethin'>[:] <cmd>
+Don't put spaces in equation_or_something.
+You can use ':' after equation or just leave it.
+e.g.
+if $a=='lol': output hello
+if 3456*9876!=1.5 goto somewhere
+
+Other SCmds:
+pause - Wait for user to press the famous 'any-key'.
+getKey <var> - Put in <var> single key (always a string).
+input <var> - Save to <var> whole sentence.
+
+
 
 
 Credits:
 Mishqutin (Czytaj: Miszkitin kurfa!)
-Waldoo, Waldzio, Waldek, Wald, Waldemar, Waldemar, Brat, Brader, Magician
+Waldoo, Waldzio, Waldek, Wald, Waldemar, Waldemar, Brat, Brader, Magician - for being smart.
 Majka the cat that sits on the table when I am doing all that stuff.
 Marcel the Wi-Fi (read vaij faiwj (Wat?)) printer. It sometimes prints all the content of any file I try to edit (Because I often press
 'Print' instead of 'Edit').
@@ -76,3 +96,7 @@ Nothing - No thing.
 It has opposite meaning than a thing.
 Means that there is no thing.
 If there is no thing, then what's really here?
+
+My glasses - Idk why
+Blackwriter the scratchpad.
+60Hz screen display - In Poland commonly named 'ekran'.

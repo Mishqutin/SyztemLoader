@@ -16,6 +16,10 @@ sz.SZData("title", "SCmd", "os.system('title {}'.format(' '.join(args)))")
 sz.SZData("dcl", "SCmd", "sz.SZData(args[0], 'SVar', None)")
 sz.SZData("edit", "SCmd", "os.system('start notepad.exe {}'.format(args[0]))")
 sz.SZData("restart", "SCmd", "programRestart()")
+sz.SZData("getKey", "SCmd", "getKey(args[0])")
+sz.SZData("input", "SCmd", "inputString(args[0])")
+sz.SZData("if", "SCmd", "doIf(args[0].replace(':', '', 1), ' '.join(args[1:]))")
+sz.SZData("pause", "SCmd", "trash = os.system('pause >> nul')")
 
 # SVars
 sz.SZData("test", "SVar", "spam eggs")

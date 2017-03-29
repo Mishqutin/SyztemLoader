@@ -11,13 +11,13 @@ print("""
 (Early shit/Wczesne gowno)""")
 time.sleep(0.75)
 
-try:
-    f = open(sz.config["sDir"]+"\\data\\home\\user\\startup.txt")
-    fileData = f.readlines()
-    f.close()
-    ISC.exeSzFull(fileData[0])
-except:
-    appendCI("Cannot execute startup file.")
+#try:
+f = open(sz.config["sDir"]+"\\data\\home\\user\\startup.txt")
+fileData = f.readlines()
+f.close()
+ISC.exeSzFull(fileData[0])
+#except:
+    #appendCI("Cannot execute startup file.")
 
 while True:
     mode = sz.SZdata['termMode']['value']

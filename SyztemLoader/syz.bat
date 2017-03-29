@@ -54,8 +54,8 @@ if %config%==1 goto config
 python exec.py
 
 
-set /p makePause =< %userprofile%\Documents\Syztem\settings\makePause.txt
-if %makePause%==false goto end
+::set /p makePause =< %userprofile%\Documents\Syztem\settings\makePause.txt
+::if %makePause%==false goto end
 echo.
 echo eof
 

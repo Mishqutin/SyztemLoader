@@ -2131,3 +2131,155 @@ python poorFile.py
 +Python file poorFile.py 
 ['ISC.do("cls")\n', 'os.chdir("{}\\\\{}".format(sz.config["sDir"], "data\\\\home"))\n', 'ISC.do("title Qutin")\n', '\n', 'print("""\n', '\n', '#PBFSEP V0.1.0\n', '\n', '\n', '                          SBPQ OS\n', '(Early shit/Wczesne gowno)""")\n', 'time.sleep(0.75)\n', '\n', 'try:\n', '    f = open(sz.config["sDir"]+"\\\\data\\\\home\\\\user\\\\startup.txt")\n', '    fileData = f.readlines()\n', '    f.close()\n', '    ISC.exeSzFull(fileData[0])\n', 'except:\n', '    appendCI("Cannot execute startup file.")\n', '\n', 'while True:\n', "    mode = sz.SZdata['termMode']['value']\n", '    refresh()\n', "    if mode == 'console':\n", '        x = input()\n', '        if x:\n', "            if sz.SZdata['echo']['value']==1: appendCI(sz.SZdata['prompt']['value']+x)\n", '            ISC.do(x)\n', "    elif mode == 'scroll':\n", "        editSidebar(0, 'Scrolling')\n", "        editSidebar(1, 'mode.')\n", "        editSidebar(2, 'w - up')\n", "        editSidebar(3, 's - down')\n", "        editSidebar(4, 'q - exit')\n", '        x = msvcrt.getch()\n', "        if x == b'w':\n", '            scrollUp()\n', "        elif x == b's':\n", '            scrollDown()\n', "        elif x == b'q':\n", "            sz.SZdata['termMode']['value'] = 'console'\n", "            editSidebar(0, '')\n", "            editSidebar(1, '')\n", "            editSidebar(2, '')\n", "            editSidebar(3, '')\n", "            editSidebar(4, '')\n", '    else:\n', "        sz.SZdata['termMode']['value'] = 'console'"] 
 eof+ 
+### 28/03/2017--21:59:29 ### 
+python poorFile.py 
+### 29/03/2017--18:13:02 ### 
+python poorFile.py 
+### 29/03/2017--18:49:54 ### 
+python poorFile.py 
+### 29/03/2017--18:54:19 ### 
+python poorFile.py 
+### 29/03/2017--19:14:21 ### 
+python poorFile.py 
+### 29/03/2017--19:21:40 ### 
+python poorFile.py 
+### 29/03/2017--19:24:29 ### 
+python poorFile.py 
+### 29/03/2017--19:25:20 ### 
+python poorFile.py 
+### 29/03/2017--19:26:39 ### 
+python poorFile.py 
+### 29/03/2017--19:27:03 ### 
+python poorFile.py 
+### 29/03/2017--19:27:31 ### 
+python poorFile.py 
+### 29/03/2017--19:27:55 ### 
+python poorFile.py 
+### 29/03/2017--19:31:19 ### 
+python poorFile.py 
+### 29/03/2017--19:31:59 ### 
+python poorFile.py 
+### 29/03/2017--19:32:21 ### 
+python poorFile.py 
+### 29/03/2017--19:36:17 ### 
+python poorFile.py 
+### 29/03/2017--19:37:15 ### 
+python poorFile.py 
+### 29/03/2017--19:38:03 ### 
+python poorFile.py 
+### 29/03/2017--19:41:59 ### 
+python poorFile.py 
+### 29/03/2017--19:43:39 ### 
+python poorFile.py 
+### 29/03/2017--19:44:40 ### 
+python poorFile.py 
+### 29/03/2017--19:46:12 ### 
+python poorFile.py 
+### 29/03/2017--19:46:30 ### 
+python poorFile.py 
+### 29/03/2017--19:49:42 ### 
+python poorFile.py 
+### 29/03/2017--19:50:04 ### 
+python poorFile.py 
+### 29/03/2017--19:52:11 ### 
+python poorFile.py 
+### 29/03/2017--19:53:45 ### 
+python poorFile.py 
+### 29/03/2017--19:55:50 ### 
+python poorFile.py 
+### 29/03/2017--19:57:44 ### 
+python poorFile.py 
+### 29/03/2017--19:58:07 ### 
+python poorFile.py 
+### 29/03/2017--19:59:30 ### 
+python poorFile.py 
+### 29/03/2017--20:00:54 ### 
+python poorFile.py 
+### 29/03/2017--20:01:37 ### 
+python poorFile.py 
+### 29/03/2017--20:02:25 ### 
+python poorFile.py 
+### 29/03/2017--20:16:17 ### 
+python poorFile.py 
+### 29/03/2017--20:16:57 ### 
+python poorFile.py 
+### 29/03/2017--20:18:33 ### 
+python poorFile.py 
+### 29/03/2017--20:37:55 ### 
+python poorFile.py 
+### 29/03/2017--20:39:38 ### 
+python poorFile.py 
+### 29/03/2017--20:40:15 ### 
+python poorFile.py 
+### 29/03/2017--20:42:20 ### 
+python poorFile.py 
+### 29/03/2017--20:43:27 ### 
+python poorFile.py 
+### 29/03/2017--20:46:17 ### 
+python poorFile.py 
+### 29/03/2017--20:47:13 ### 
+python poorFile.py 
+### 29/03/2017--21:09:55 ### 
+python poorFile.py 
+### 29/03/2017--21:17:20 ### 
+python poorFile.py 
+### 29/03/2017--21:18:10 ### 
+python poorFile.py 
+### 29/03/2017--21:22:49 ### 
+python poorFile.py 
+### 29/03/2017--21:24:17 ### 
+python poorFile.py 
+### 29/03/2017--21:26:45 ### 
+python poorFile.py 
+### 29/03/2017--21:26:59 ### 
+python poorFile.py 
+### 29/03/2017--21:27:47 ### 
+python poorFile.py 
+### 29/03/2017--21:30:42 ### 
+python poorFile.py 
+### 29/03/2017--21:31:07 ### 
+python poorFile.py 
+### 29/03/2017--21:32:00 ### 
+python poorFile.py 
+### 29/03/2017--21:32:12 ### 
+python poorFile.py 
+### 29/03/2017--21:32:34 ### 
+python poorFile.py 
+### 29/03/2017--21:32:49 ### 
+python poorFile.py 
+### 29/03/2017--21:35:27 ### 
+python poorFile.py 
+### 29/03/2017--21:38:54 ### 
+python poorFile.py 
+### 29/03/2017--21:44:52 ### 
+python poorFile.py 
+### 29/03/2017--21:51:29 ### 
+python poorFile.py 
+### 29/03/2017--21:53:07 ### 
+python poorFile.py 
+### 29/03/2017--21:54:41 ### 
+python poorFile.py 
+### 29/03/2017--21:58:42 ### 
+python poorFile.py 
+### 29/03/2017--22:01:43 ### 
+python poorFile.py 
+### 29/03/2017--22:09:06 ### 
+python poorFile.py 
+### 29/03/2017--22:10:19 ### 
+python poorFile.py 
+### 29/03/2017--22:11:14 ### 
+python poorFile.py 
+### 29/03/2017--22:12:41 ### 
+python poorFile.py 
+### 29/03/2017--22:13:34 ### 
+python poorFile.py 
+### 29/03/2017--22:14:06 ### 
+python poorFile.py 
+### 29/03/2017--22:14:33 ### 
+python poorFile.py 
+### 29/03/2017--22:17:03 ### 
+python poorFile.py 
+### 29/03/2017--22:17:40 ### 
+python poorFile.py 
+### 29/03/2017--22:18:50 ### 
+python poorFile.py 
